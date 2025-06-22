@@ -1,0 +1,1152 @@
+* {
+  background-color: #2C2C2C;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+.Category {
+  display: grid;
+  grid-template-columns: 20px 1fr 1fr 20px;
+  grid-template-rows: 200px 100px 120px auto;
+}
+
+.logoContainer {
+  display: grid;
+  grid-area: 1 / 1 / 2 / 4;
+  place-self: center;;
+}
+
+.logo {
+  place-items: center;
+  width: 116px;
+}
+
+.pickCategory {
+  display: grid;
+  grid-area: 2 / 1 / 3 / 4;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.logicContainer {
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
+  place-items: center;;
+}
+
+.logic {
+  width: 79px;
+  height: 79px;
+  padding: 20px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+}
+
+.logic:active {
+  border-color: #FF8225;
+}
+
+.mathContainer {
+  display: grid;
+  grid-area: 3 / 3 / 4 / 4;
+  place-items: center;
+}
+
+.math {
+  width: 79px;
+  height: 79px;
+  padding: 20px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+}
+
+.math:active {
+  border-color: #FF8225;
+}
+
+/*  Level Container */
+.LevelContainer {
+  display: grid;
+  grid-template-columns: 1fr 80px 20px 80px 20px 80px 1fr;
+  grid-template-rows: 200px 80px 20px 80px 20px 80px 20px 80px 150px;
+}
+
+.logoContainer {
+  display: grid;
+  grid-area: 1 / 1 / 2 / 8;
+  place-self: center;
+}
+
+.playButton {
+  display: grid;
+  grid-area: 9 / 1 / 10 / 8;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+  font-size: 24px;
+  width: 180px;
+  height: 60px;
+  border-style: none;
+  border-radius: 50px;
+  border-width: 1px;
+  background-color: #F7374F;
+}
+
+.playButton:active {
+  background-color: #ba2b3c;
+}
+
+/* Logic & Math Level */
+
+.l1, .m1 {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 3;
+  font-size: 32px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: white;
+  width: 80px;
+  height: 80px;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.l2, .m2 {
+  display: grid;
+  grid-area: 2 / 4 / 3 / 5;
+  font-size: 32px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: white;
+  width: 80px;
+  height: 80px;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.l3, .m3 {
+  display: grid;
+  grid-area: 2 / 6 / 3 / 7;
+  font-size: 32px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: white;
+  width: 80px;
+  height: 80px;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.l4, .m4 {
+  display: grid;
+  grid-area: 4 / 2 / 5 / 3;
+  font-size: 32px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: white;
+  width: 80px;
+  height: 80px;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.l5, .m5 {
+  display: grid;
+  grid-area: 4 / 4 / 5 / 5;
+  font-size: 32px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: white;
+  width: 80px;
+  height: 80px;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.l6, .m6 {
+  display: grid;
+  grid-area: 4 / 6 / 5 / 7;
+  font-size: 32px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: white;
+  width: 80px;
+  height: 80px;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.l7, .m7 {
+  display: grid;
+  grid-area: 6 / 2 / 7 / 3;
+  font-size: 32px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: white;
+  width: 80px;
+  height: 80px;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.l8, .m8 {
+  display: grid;
+  grid-area: 6 / 4 / 7 / 5;
+  font-size: 32px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: white;
+  width: 80px;
+  height: 80px;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.l9, .m9 {
+  display: grid;
+  grid-area: 6 / 6 / 7 / 7;
+  font-size: 32px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: white;
+  width: 80px;
+  height: 80px;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.l10, .m10 {
+  display: grid;
+  grid-area: 8 / 2 / 9 / 3;
+  font-size: 32px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: white;
+  width: 80px;
+  height: 80px;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.l11, .m11 {
+  display: grid;
+  grid-area: 8 / 4 / 9 / 5;
+  font-size: 32px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: white;
+  width: 80px;
+  height: 80px;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.l12, .m12 {
+  display: grid;
+  grid-area: 8 / 6 / 9 / 7;
+  font-size: 32px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: white;
+  width: 80px;
+  height: 80px;
+  place-items: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.l1:active, .m1:active, 
+.l2:active, .m2:active, 
+.l3:active, .m3:active, 
+.l4:active, .m4:active, 
+.l5:active, .m5:active, 
+.l6:active, .m6:active, 
+.l7:active, .m7:active, 
+.l8:active, .m8:active, 
+.l9:active, .m9:active, 
+.l10:active, .m10:active, 
+.l11:active, .m11:active, 
+.l12:active, .m12:active {
+  border-color: #FF8225;
+}
+
+/* Math level 1 */
+
+
+.M1Container {
+  display: grid;
+  grid-template-columns: 1fr 287px 1fr;
+  grid-template-rows: 200px 280px 250px;
+}
+
+.m1ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 3;
+  place-items: center;
+}
+
+.m1ProblemImg {
+  width: 287px;
+  height: 280px;
+}
+
+.answerInputContainer {
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
+  place-items: center;
+  align-content: center;
+  gap: 10px;
+}
+
+.answerInput {
+  width: 200px;
+  border-style: none;
+  border-bottom-style: solid;
+}
+
+.answerInput:focus {
+  outline: none;
+  border-color: #F7374F;
+}
+
+.answerButton {
+  width: 120px;
+  height: 40px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  border-color: #F7374F;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.answerButton:active {
+  border-color: #ba2b3c;
+}
+
+/* Math level 2 */
+
+
+.M2Container {
+  display: grid;
+  grid-template-columns: 1fr 287px 1fr;
+  grid-template-rows: 200px 280px 250px;
+}
+
+.m2ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 3;
+  place-items: center;
+}
+
+.m2ProblemImg {
+  width: 287px;
+  height: 280px;
+}
+
+/* Math level 3 */
+
+
+.M3Container {
+  display: grid;
+  grid-template-columns: 1fr 287px 1fr;
+  grid-template-rows: 200px 280px 250px;
+}
+
+.m3ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.m3ProblemStatement {
+  display: grid;
+  place-items: center;
+  width: 287px;
+  height: 280px;
+  font-size: 32px;
+}
+
+/* Math level 4 */
+
+
+.M4Container {
+  display: grid;
+  grid-template-columns: 1fr 287px 1fr;
+  grid-template-rows: 200px 280px 250px;
+}
+
+.m4ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 3;
+  place-items: center;
+}
+
+.m4ProblemImg {
+  width: 238px;
+  height: 192px;
+}
+
+/* Math level 5 */
+
+
+.M5Container {
+  display: grid;
+  grid-template-columns: 1fr 287px 1fr;
+  grid-template-rows: 200px 280px 250px;
+}
+
+.m5ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 3;
+  place-items: center;
+}
+
+.m5ProblemImg {
+  width: 287px;
+  height: 280px;
+}
+
+/* Math level 6 */
+
+
+.M6Container {
+  display: grid;
+  grid-template-columns: 1fr 287px 1fr;
+  grid-template-rows: 200px 280px 250px;
+}
+
+.m6ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.m6ProblemStatement {
+  display: grid;
+  place-items: center;
+  width: 287px;
+  height: 280px;
+  font-size: 32px;
+}
+
+/* Math level 7 */
+
+
+.M7Container {
+  display: grid;
+  grid-template-columns: 1fr 287px 1fr;
+  grid-template-rows: 200px 280px 250px;
+}
+
+.m7ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.m7ProblemStatement {
+  display: grid;
+  place-items: center;
+  width: 287px;
+  height: 280px;
+  font-size: 32px;
+}
+
+/* Math level 8 */
+
+
+.M8Container {
+  display: grid;
+  grid-template-columns: 1fr 287px 1fr;
+  grid-template-rows: 200px 280px 250px;
+}
+
+.m8ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 3;
+  place-items: center;
+}
+
+.m8ProblemImg {
+  width: 228px;
+  height: 100px;
+  place-items: center;
+}
+
+/* Math level 9 */
+
+
+.M9Container {
+  display: grid;
+  grid-template-columns: 1fr 287px 1fr;
+  grid-template-rows: 200px 280px 250px;
+}
+
+.m9ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 3;
+  place-items: center;
+}
+
+.m9ProblemImg {
+  width: 246px;
+  height: 186px;
+  place-items: center;
+}
+
+/* Math level 10 */
+
+
+.M10Container {
+  display: grid;
+  grid-template-columns: 1fr 287px 1fr;
+  grid-template-rows: 200px 296px 234px;
+}
+
+.m10ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 3;
+  place-items: center;
+}
+
+.m10ProblemImg {
+  width: 308px;
+  height: 296px;
+  place-items: center;
+}
+
+
+/* Math level 11 */
+
+
+.M11Container {
+  display: grid;
+  grid-template-columns: 1fr 287px 1fr;
+  grid-template-rows: 200px 280px 250px;
+}
+
+.m11ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 3;
+  place-items: center;
+}
+
+.m11ProblemImg {
+  width: 247px;
+  height: 243px;
+  place-items: center;
+}
+
+
+/* Math level 12 */
+
+
+.M12Container {
+  display: grid;
+  grid-template-columns: 1fr 287px 1fr;
+  grid-template-rows: 200px 280px 250px;
+}
+
+.m12ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.m12ProblemStatement {
+  display: grid;
+  place-items: center;
+  width: 287px;
+  height: 280px;
+  font-size: 32px;
+}
+
+/* Logic level 1 */
+
+
+.L1Container {
+  display: grid;
+  grid-template-columns: 1fr 102px 102px 102px 1fr;
+  grid-template-rows: 200px 250px 250px;
+}
+
+.l1ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 5;
+  place-items: center;
+}
+
+.l1ProblemImg {
+  width: 279px;
+  height: 154px;
+}
+
+.l1a {
+  width: 90px;
+  height: 121px;
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.l1b {
+  width: 90px;
+  height: 121px;
+  display: grid;
+  grid-area: 3 / 3 / 4 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.l1c {
+  width: 90px;
+  height: 121px;
+  display: grid;
+  grid-area: 3 / 4 / 4 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+/* Logic level 2 */
+
+
+.L2Container {
+  display: grid;
+  grid-template-columns: 1fr 102px 102px 102px 1fr;
+  grid-template-rows: 200px 250px 250px;
+}
+
+.l2ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 5;
+  place-items: center;
+}
+
+.l2ProblemImg {
+  width: 172px;
+  height: 174px;
+}
+
+.l2a {
+  width: 77px;
+  height: 109px;
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.l2b {
+  width: 77px;
+  height: 109px;
+  display: grid;
+  grid-area: 3 / 3 / 4 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.l2c {
+  width: 77px;
+  height: 109px;
+  display: grid;
+  grid-area: 3 / 4 / 4 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+/* Logic level 3 */
+
+
+.L3Container {
+  display: grid;
+  grid-template-columns: 1fr 102px 102px 102px 1fr;
+  grid-template-rows: 200px 250px 250px;
+}
+
+.l3ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 5;
+  place-items: center;
+}
+
+.l3ProblemImg {
+  width: 246px;
+  height: 237px;
+}
+
+.l3a {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.l3b {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 3 / 4 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.l3c {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 4 / 4 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+/* Logic level 4 */
+
+
+.L4Container {
+  display: grid;
+  grid-template-columns: 1fr 102px 102px 102px 1fr;
+  grid-template-rows: 200px 250px 250px;
+}
+
+.l4ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 5;
+  place-items: center;
+}
+
+.l4ProblemImg {
+  width: 246px;
+  height: 237px;
+}
+
+.l4a {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.l4b {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 3 / 4 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.l4c {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 4 / 4 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+
+/* Logic level 5 */
+
+
+.L5Container {
+  display: grid;
+  grid-template-columns: 1fr 102px 102px 102px 1fr;
+  grid-template-rows: 200px 250px 250px;
+}
+
+.l5ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 5;
+  place-items: center;
+}
+
+.l5ProblemImg {
+  width: 275.8px;
+  height: 189px;
+}
+
+.l5a {
+  width: 89.8px;
+  height: 117px;
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.l5b {
+  width: 89.8px;
+  height: 117px;
+  display: grid;
+  grid-area: 3 / 3 / 4 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.l5c {
+  width: 89.8px;
+  height: 117px;
+  display: grid;
+  grid-area: 3 / 4 / 4 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+/* Logic level 6 */
+
+
+.L6Container {
+  display: grid;
+  grid-template-columns: 1fr 102px 102px 102px 1fr;
+  grid-template-rows: 200px 250px 250px;
+}
+
+.l6ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 5;
+  place-items: center;
+}
+
+.l6ProblemImg {
+  width: 210px;
+  height: 210px;
+}
+
+.l6a {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.l6b {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 3 / 4 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.l6c {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 4 / 4 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+/* Logic level 7 */
+
+
+.L7Container {
+  display: grid;
+  grid-template-columns: 1fr 102px 102px 102px 1fr;
+  grid-template-rows: 200px 250px 250px;
+}
+
+.l7ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 5;
+  place-items: center;
+}
+
+.l7ProblemImg {
+  width: 242px;
+  height: 144px;
+}
+
+.l7a {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.l7b {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 3 / 4 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.l7c {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 4 / 4 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+/* Logic level 8 */
+
+
+.L8Container {
+  display: grid;
+  grid-template-columns: 1fr 102px 102px 102px 1fr;
+  grid-template-rows: 200px 250px 250px;
+}
+
+.l8ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 5;
+  place-items: center;
+}
+
+.l8ProblemImg {
+  width: 250px;
+  height: 208px;
+}
+
+.l8a {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.l8b {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 3 / 4 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.l8c {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 4 / 4 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+/* Logic level 9 */
+
+
+.L9Container {
+  display: grid;
+  grid-template-columns: 1fr 102px 102px 102px 1fr;
+  grid-template-rows: 200px 320px 210px;
+}
+
+.l9ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 5;
+  place-items: center;
+}
+
+.l9ProblemImg {
+  width: 294px;
+  height: 293px;
+}
+
+.l9a {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.l9b {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 3 / 4 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.l9c {
+  width: 91px;
+  height: 127px;
+  display: grid;
+  grid-area: 3 / 4 / 4 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+/* Logic level 10 */
+
+
+.L10Container {
+  display: grid;
+  grid-template-columns: 1fr 102px 102px 102px 1fr;
+  grid-template-rows: 200px 280px 210px;
+}
+
+.l10ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 5;
+  place-items: center;
+}
+
+.l10ProblemImg {
+  width: 200px;
+  height: 200px;
+}
+
+.l10a {
+  width: 70.07px;
+  height: 108px;
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.l10b {
+  width: 70.07px;
+  height: 108px;
+  display: grid;
+  grid-area: 3 / 3 / 4 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.l10c {
+  width: 70.07px;
+  height: 108px;
+  display: grid;
+  grid-area: 3 / 4 / 4 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+/* Logic level 11 */
+
+
+.L11Container {
+  display: grid;
+  grid-template-columns: 1fr 102px 102px 102px 1fr;
+  grid-template-rows: 200px 280px 210px;
+}
+
+.l11ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 5;
+  place-items: center;
+}
+
+.l11ProblemImg {
+  width: 200px;
+  height: 133.33px;
+}
+
+.l11a {
+  width: 70.07px;
+  height: 104px;
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.l11b {
+  width: 70.07px;
+  height: 104px;
+  display: grid;
+  grid-area: 3 / 3 / 4 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.l11c {
+  width: 70.07px;
+  height: 104px;
+  display: grid;
+  grid-area: 3 / 4 / 4 / 5;
+  align-self: center;
+  justify-self: center;
+}
+
+
+/* Logic level 12 */
+
+
+.L12Container {
+  display: grid;
+  grid-template-columns: 1fr 102px 102px 102px 1fr;
+  grid-template-rows: 200px 200px 210px;
+}
+
+.l12ProblemContainer {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 5;
+  place-items: center;
+}
+
+.l12ProblemImg {
+  width: 296.42px;
+  height: 226.42px;
+}
+
+.l12a {
+  width: 89px;
+  height: 158px;
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.l12b {
+  width: 89px;
+  height: 158px;
+  display: grid;
+  grid-area: 3 / 3 / 4 / 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.l12c {
+  width: 77px;
+  height: 136px;
+  display: grid;
+  grid-area: 3 / 4 / 4 / 5;
+  align-self: center;
+  justify-self: center;
+  margin-top: 20%
+}
