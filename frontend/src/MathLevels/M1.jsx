@@ -1,6 +1,7 @@
 import logo from '../assets/logo.png';
 import m1ProblemImg from '../assets/MathLevels/m1.png';
 
+import React, { useState } from 'react';
 
 function M1() {
     const [answer, setAnswer] = useState('');
@@ -8,7 +9,7 @@ function M1() {
 
     const handleSubmit = async () => {
         try {
-            const response = await fetch('http://localhost:8080/api/answers/check', {
+            const response = await fetch('http://localhost:8080/api/answer/check', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -327,6 +327,7 @@
   width: 200px;
   border-style: none;
   border-bottom-style: solid;
+  text-align: center;
 }
 
 .answerInput:focus {
