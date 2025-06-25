@@ -105,7 +105,6 @@
   grid-area: 2 / 2 / 3 / 3;
   font-size: 32px;
   border-style: solid;
-  border-radius: 20px;
   border-width: 1px;
   border-color: white;
   width: 80px;
@@ -120,7 +119,6 @@
   grid-area: 2 / 4 / 3 / 5;
   font-size: 32px;
   border-style: solid;
-  border-radius: 20px;
   border-width: 1px;
   border-color: white;
   width: 80px;
@@ -135,7 +133,6 @@
   grid-area: 2 / 6 / 3 / 7;
   font-size: 32px;
   border-style: solid;
-  border-radius: 20px;
   border-width: 1px;
   border-color: white;
   width: 80px;
@@ -150,7 +147,6 @@
   grid-area: 4 / 2 / 5 / 3;
   font-size: 32px;
   border-style: solid;
-  border-radius: 20px;
   border-width: 1px;
   border-color: white;
   width: 80px;
@@ -165,7 +161,6 @@
   grid-area: 4 / 4 / 5 / 5;
   font-size: 32px;
   border-style: solid;
-  border-radius: 20px;
   border-width: 1px;
   border-color: white;
   width: 80px;
@@ -180,7 +175,6 @@
   grid-area: 4 / 6 / 5 / 7;
   font-size: 32px;
   border-style: solid;
-  border-radius: 20px;
   border-width: 1px;
   border-color: white;
   width: 80px;
@@ -195,7 +189,6 @@
   grid-area: 6 / 2 / 7 / 3;
   font-size: 32px;
   border-style: solid;
-  border-radius: 20px;
   border-width: 1px;
   border-color: white;
   width: 80px;
@@ -210,7 +203,6 @@
   grid-area: 6 / 4 / 7 / 5;
   font-size: 32px;
   border-style: solid;
-  border-radius: 20px;
   border-width: 1px;
   border-color: white;
   width: 80px;
@@ -225,7 +217,6 @@
   grid-area: 6 / 6 / 7 / 7;
   font-size: 32px;
   border-style: solid;
-  border-radius: 20px;
   border-width: 1px;
   border-color: white;
   width: 80px;
@@ -240,7 +231,6 @@
   grid-area: 8 / 2 / 9 / 3;
   font-size: 32px;
   border-style: solid;
-  border-radius: 20px;
   border-width: 1px;
   border-color: white;
   width: 80px;
@@ -255,7 +245,6 @@
   grid-area: 8 / 4 / 9 / 5;
   font-size: 32px;
   border-style: solid;
-  border-radius: 20px;
   border-width: 1px;
   border-color: white;
   width: 80px;
@@ -270,7 +259,6 @@
   grid-area: 8 / 6 / 9 / 7;
   font-size: 32px;
   border-style: solid;
-  border-radius: 20px;
   border-width: 1px;
   border-color: white;
   width: 80px;
