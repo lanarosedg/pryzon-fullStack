@@ -69,8 +69,8 @@
 /*  Level Container */
 .LevelContainer {
   display: grid;
-  grid-template-columns: 1fr 80px 20px 80px 20px 80px 1fr;
-  grid-template-rows: 200px 80px 20px 80px 20px 80px 20px 80px 150px;
+  grid-template-columns: 1fr 80px 10px 80px 10px 80px 1fr;
+  grid-template-rows: 200px 80px 10px 80px 10px 80px 10px 80px 150px;
 }
 
 .logoContainer {
