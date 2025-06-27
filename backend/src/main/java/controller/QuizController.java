@@ -16,7 +16,8 @@ public class QuizController {
             "M3", "H",
             "M4", "0",
             "M5", "4",
-            "M6", "AC");
+            "M6", "AC",
+            "M7", "256");
 
     @PostMapping("/check-answer")
     public boolean checkAnswer(@RequestBody AnswerRequest request) {
