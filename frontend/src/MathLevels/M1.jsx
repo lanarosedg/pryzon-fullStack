@@ -10,7 +10,8 @@ function M1() {
     const handleSubmit = async () => {
         try {
             const response = await axios.post('http://localhost:8080/api/check-answer', {
-                answer: parseInt(answer)
+                answer: parseInt(answer),
+                level: "M1"
             });
             setResult(response.data ? "Correct!" : "Wrong answer. Try again.");
         } catch (error) {
