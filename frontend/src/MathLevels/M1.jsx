@@ -1,68 +1,48 @@
+import { useState } from 'react';
+import axios from 'axios';
 import logo from '../assets/logo.png';
 import m1ProblemImg from '../assets/MathLevels/m1.png';
 
-import React, { useState } from 'react';
-
 function M1() {
     const [answer, setAnswer] = useState('');
-    const [isCorrect, setIsCorrect] = useState(null);
+    const [result, setResult] = useState('');
 
     const handleSubmit = async () => {
         try {
-            const response = await fetch('http://localhost:8080/api/answer/check', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ answer }),
+            const response = await axios.post('http://localhost:8080/api/check-answer', {
+                answer: parseInt(answer)
             });
-
-            const result = await response.json();
-            setIsCorrect(result);
-        } catch (err) {
-            console.error('Error checking answer:', err);
+            setResult(response.data ? "Correct!" : "Wrong answer. Try again.");
+        } catch (error) {
+            setResult("Error checking answer.");
+            console.error(error);
         }
     };
 
     return (
-        <>
         <div className="M1Container">
             <div className="logoContainer">
-                <img 
-                    src={logo} 
-                    alt="" 
-                    className="logo" 
-                />
+                <img src={logo} alt="" className="logo" />
             </div>
             <div className="m1ProblemContainer">
-                <img 
-                    src={m1ProblemImg} 
-                    alt="" 
-                    className="m1ProblemImg" 
-                />
+                <img src={m1ProblemImg} alt="" className="m1ProblemImg" />
             </div>
             <div className="answerInputContainer">
                 <input 
                     type="text" 
                     className="answerInput"
                     value={answer}
-                    onChange={(e) => setAnswer(e.target.value)} 
+                    onChange={(e) => setAnswer(e.target.value)}
                 />
-                <button 
-                    className="answerButton" 
-                    onClick={handleSubmit}
-                    >
-                        Submit
+                <button className="answerButton" onClick={handleSubmit}>
+                    Submit
                 </button>
-                {isCorrect !== null && (
-                    <div>
-                        {isCorrect ? 'Correct!' : 'Try again!'}
-                    </div>
-                )}
+            </div>
+            <div className="resultMessage">
+                {result}
             </div>
         </div>
-        </>
-    )
+    );
 }
 
 export default M1;
