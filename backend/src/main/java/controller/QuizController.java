@@ -13,7 +13,8 @@ public class QuizController {
     private final Map<String, String> correctAnswers = Map.of(
             "M1", "4",
             "M2", "9",
-            "M3", "H");
+            "M3", "H",
+            "M4", "0");
 
     @PostMapping("/check-answer")
     public boolean checkAnswer(@RequestBody AnswerRequest request) {
