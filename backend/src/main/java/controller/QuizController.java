@@ -10,15 +10,19 @@ import java.util.Map;
 @RequestMapping("/api")
 public class QuizController {
 
-    private final Map<String, String> correctAnswers = Map.of(
-            "M1", "4",
-            "M2", "9",
-            "M3", "H",
-            "M4", "0",
-            "M5", "4",
-            "M6", "AC",
-            "M7", "256",
-            "M8", "30");
+    private final Map<String, String> correctAnswers = Map.ofEntries(
+            Map.entry("M1", "4"),
+            Map.entry("M2", "9"),
+            Map.entry("M3", "H"),
+            Map.entry("M4", "0"),
+            Map.entry("M5", "4"),
+            Map.entry("M6", "AC"),
+            Map.entry("M7", "256"),
+            Map.entry("M8", "30"),
+            Map.entry("M9", "16"),
+            Map.entry("M10", "36"),
+            Map.entry("M11", "12"),
+            Map.entry("M12", "CF"));
 
     @PostMapping("/check-answer")
     public boolean checkAnswer(@RequestBody AnswerRequest request) {
