@@ -1,17 +1,17 @@
 package dto;
 
 public class AnswerRequest {
-    private int answer;
+    private String answer; // ✅ use String, not int
     private String level;
 
     public AnswerRequest() {
     }
 
-    public int getAnswer() {
+    public String getAnswer() {
         return answer;
     }
 
-    public void setAnswer(int answer) {
+    public void setAnswer(String answer) {
         this.answer = answer;
     }
 
