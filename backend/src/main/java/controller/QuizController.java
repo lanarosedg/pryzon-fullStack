@@ -24,7 +24,8 @@ public class QuizController {
             Map.entry("M11", "12"),
             Map.entry("M12", "CF"),
 
-            Map.entry("L1", "C"));
+            Map.entry("L1", "C"),
+            Map.entry("L2", "C"));
 
     @PostMapping("/check-answer")
     public boolean checkAnswer(@RequestBody AnswerRequest request) {

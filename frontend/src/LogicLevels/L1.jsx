@@ -15,7 +15,7 @@ function L1() {
     const handleClick = async (choice) => {
         try {
             const response = await axios.post('http://localhost:8080/api/check-answer', {
-                answer: choice,       // "A", "B", or "C"
+                answer: choice,
                 level: "L1"
             });
             setResult(response.data ? "Correct!" : "Wrong answer. Try again.");
@@ -24,6 +24,7 @@ function L1() {
             console.error(error);
         }
     };
+    
     return (
         <>
         <div className="L1Container">
