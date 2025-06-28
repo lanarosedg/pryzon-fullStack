@@ -23,7 +23,7 @@ function L3() {
             setResult("Error checking answer.");
             console.error(error);
         }
-    }
+    };
 
     return (
         <>
