@@ -10,7 +10,7 @@ import l4c from '../assets/LogicLevels/l4c.png';
 
 
 function L4() {
-    const [result , setResult] = useState('');
+    const [result, setResult] = useState('');
 
     const handleClick = async (choice) => {
         try {
