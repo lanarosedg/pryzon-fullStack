@@ -55,7 +55,9 @@ function M1() {
                 </div>
             )}
             {isCorrect === false && (
-                <div className="wrong-animation">✖ Try Again</div>
+                <div className="wrong-animation">
+                    ✖ Try Again
+                </div>
             )}
         </div>
     );

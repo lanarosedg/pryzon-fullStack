@@ -1142,11 +1142,11 @@
 
 .correct-animation {
   display: flex;
-  flex-direction: column; /* stack items vertically */
-  justify-content: center; /* center vertically */
-  align-items: center;     /* center horizontally */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  grid-area: 2 / 2 / 3 / 3; /* optional, depending on parent layout */
+  grid-area: 2 / 2 / 3 / 3;
   text-align: center;
 
   font-size: 24px;
@@ -1155,10 +1155,13 @@
 }
 
 .wrong-animation {
-  color: red;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 18px;
   animation: shake 0.3s ease-in-out;
+  color: #F7374F;
+
+  display: flex;
+  grid-area: 3 / 2 / 4 / 3;
+  justify-content: center;
 }
 
 @keyframes pop {
