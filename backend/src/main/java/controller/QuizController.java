@@ -44,5 +44,4 @@ public class QuizController {
 
         return correctAnswers.getOrDefault(level, "").equalsIgnoreCase(answer);
     }
-
-}
+}  

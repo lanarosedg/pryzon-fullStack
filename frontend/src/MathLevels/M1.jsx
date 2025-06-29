@@ -3,20 +3,25 @@ import axios from 'axios';
 import logo from '../assets/logo.png';
 import m1ProblemImg from '../assets/MathLevels/m1.png';
 
+import next from '../assets/next.png'
+
 function M1() {
     const [answer, setAnswer] = useState('');
-    const [result, setResult] = useState('');
+    const [isCorrect, setIsCorrect] = useState(null);
 
     const handleSubmit = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/api/check-answer', {
-                answer: answer.trim(), // keep as string
-                level: "M1"
+            const res = await axios.post('http://localhost:8080/api/check-answer', {
+                answer: answer,
+                level: 'M1'
             });
-            setResult(response.data ? "Correct!" : "Wrong answer. Try again.");
-        } catch (error) {
-            setResult("Error checking answer.");
-            console.error(error);
+            if (res.data === true) {
+                setIsCorrect(true);
+            } else {
+                setIsCorrect(false);
+            }
+        } catch (err) {
+            console.error("Error checking answer", err);
         }
     };
 
@@ -39,9 +44,19 @@ function M1() {
                     Submit
                 </button>
             </div>
-            <div className="resultMessage">
-                {result}
-            </div>
+            {isCorrect === true && (
+                <div className="correct-animation">
+                    <p>✔ Correct!</p>
+                    <img 
+                        src={next} 
+                        alt="" 
+                        className="nextButton" 
+                    />
+                </div>
+            )}
+            {isCorrect === false && (
+                <div className="wrong-animation">✖ Try Again</div>
+            )}
         </div>
     );
 }
