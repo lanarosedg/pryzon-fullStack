@@ -1,13 +1,15 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import logo from '../assets/logo.png';
 import m1ProblemImg from '../assets/MathLevels/m1.png';
-
-import next from '../assets/next.png'
+import next from '../assets/next.png';
+import { useNavigate } from 'react-router-dom';
 
 function M1() {
     const [answer, setAnswer] = useState('');
     const [isCorrect, setIsCorrect] = useState(null);
+    const [shakeInput, setShakeInput] = useState(false); // State to control shaking effect
+    const navigate = useNavigate();
 
     const handleSubmit = async () => {
         try {
@@ -19,6 +21,8 @@ function M1() {
                 setIsCorrect(true);
             } else {
                 setIsCorrect(false);
+                setShakeInput(true); // Trigger shake effect on wrong answer
+                setTimeout(() => setShakeInput(false), 500); // Reset shake effect after 500ms
             }
         } catch (err) {
             console.error("Error checking answer", err);
@@ -36,7 +40,7 @@ function M1() {
             <div className="answerInputContainer">
                 <input 
                     type="text" 
-                    className="answerInput"
+                    className={`answerInput ${shakeInput ? 'shake' : ''}`}
                     value={answer}
                     onChange={(e) => setAnswer(e.target.value)}
                 />
@@ -51,12 +55,8 @@ function M1() {
                         src={next} 
                         alt="" 
                         className="nextButton" 
+                        onClick={() => navigate('/MathLevels/M2')}
                     />
-                </div>
-            )}
-            {isCorrect === false && (
-                <div className="wrong-animation">
-                    ✖ Try Again
                 </div>
             )}
         </div>

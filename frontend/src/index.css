@@ -299,8 +299,8 @@
 }
 
 .m1ProblemImg {
-  width: 287px;
-  height: 280px;
+  width: 285px;
+  height: 278px;
 }
 
 .answerInputContainer {
@@ -355,8 +355,8 @@
 }
 
 .m2ProblemImg {
-  width: 287px;
-  height: 280px;
+  width: 285px;
+  height: 278px;
 }
 
 /* Math level 3 */
@@ -1150,18 +1150,11 @@
   text-align: center;
 
   font-size: 24px;
-  font-weight: bold;
   animation: pop 0.5s ease-out;
 }
 
-.wrong-animation {
-  font-size: 18px;
-  animation: shake 0.3s ease-in-out;
-  color: #F7374F;
-
-  display: flex;
-  grid-area: 3 / 2 / 4 / 3;
-  justify-content: center;
+.shake {
+    animation: shake 0.5s ease;
 }
 
 @keyframes pop {
