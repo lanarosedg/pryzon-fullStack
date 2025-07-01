@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 function M1() {
     const [answer, setAnswer] = useState('');
     const [isCorrect, setIsCorrect] = useState(null);
-    const [shakeInput, setShakeInput] = useState(false); // State to control shaking effect
+    const [shakeInput, setShakeInput] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = async () => {
