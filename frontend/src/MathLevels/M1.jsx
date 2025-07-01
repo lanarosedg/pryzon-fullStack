@@ -21,8 +21,8 @@ function M1() {
                 setIsCorrect(true);
             } else {
                 setIsCorrect(false);
-                setShakeInput(true); // Trigger shake effect on wrong answer
-                setTimeout(() => setShakeInput(false), 500); // Reset shake effect after 500ms
+                setShakeInput(true);
+                setTimeout(() => setShakeInput(false), 500); 
             }
         } catch (err) {
             console.error("Error checking answer", err);

@@ -3,25 +3,34 @@ import axios from 'axios';
 import logo from '../assets/logo.png';
 import m4ProblemImg from '../assets/MathLevels/m4.png';
 
+import next from '../assets/next.png';
+import { useNavigate } from 'react-router-dom';
 
-function M1() {
+
+function M4() {
     const [answer, setAnswer] = useState('');
-    const [result, setResult] = useState('');
+    const [isCorrect, setIsCorrect] = useState(null);
+    const [shakeInput, setShakeInput] = useState(false);
+    const navigate = useNavigate();
 
     const handleSubmit = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/api/check-answer', {
-                answer: answer.trim(), // keep as string
-                level: "M4" // ✅ correct level
+            const res = await axios.post('http://localhost:8080/api/check-answer', {
+                answer: answer,
+                level: 'M4'
             });
-            setResult(response.data ? "Correct!" : "Wrong answer. Try again.");
-        } catch (error) {
-            setResult("Error checking answer.");
-            console.error(error);
+            if (res.data === true) {
+                setIsCorrect(true);
+            } else {
+                setIsCorrect(false);
+                setShakeInput(true);
+                setTimeout(() => setShakeInput(false), 500);
+            }
+        } catch (err) {
+            console.error("Error checking answer", err);
         }
     };
     return (
-        <>
         <div className="M4Container">
             <div className="logoContainer">
                 <img 
@@ -40,20 +49,27 @@ function M1() {
             <div className="answerInputContainer">
                 <input 
                     type="text" 
-                    className="answerInput" 
+                    className={`answerInput ${shakeInput ? 'shake' : ''}`} 
                     value={answer}
                     onChange={(e) => setAnswer(e.target.value)} 
                 />
                 <button className="answerButton" onClick={handleSubmit}>
                     Submit
                 </button>
-                <div className="resultMessage">
-                    {result}
-                </div>
             </div>
+            {isCorrect === true && (
+                <div className="correct-animation">
+                    <p>✔ Correct!</p>
+                    <img 
+                        src={next} 
+                        alt="" 
+                        className="nextButton" 
+                        onClick={() => navigate('/MathLevels/M5')}
+                    />
+                </div>
+            )}
         </div>
-        </>
-    )
+    );
 }
 
-export default M1;
+export default M4;
