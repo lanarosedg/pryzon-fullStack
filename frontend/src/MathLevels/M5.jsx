@@ -3,18 +3,29 @@ import axios from 'axios';
 import logo from '../assets/logo.png';
 import m5ProblemImg from '../assets/MathLevels/m5.png';
 
+import next from '../assets/next.png';
+import { useNavigate } from 'react-router-dom';
+
 
 function M5() {
     const [answer, setAnswer] = useState('');
-    const [result, setResult] = useState('');
+    const [isCorrect, setIsCorrect] = useState(null);
+    const [shakeInput, setShakeInput] = useState(false);
+    const navigate = useNavigate();
 
     const handleSubmit = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/api/check-answer', {
-                answer: answer.trim(), // keep as string
-                level: "M5" // ✅ correct level
+            const res = await axios.post('http://localhost:8080/api/check-answer', {
+                answer: answer,
+                level: "M5"
             });
-            setResult(response.data ? "Correct!" : "Wrong answer. Try again.");
+            if (res.data === true) {
+                setIsCorrect(true);
+            } else {
+                setIsCorrect(false);
+                setShakeInput(true);
+                setTimeout(() => set)
+            }
         } catch (error) {
             setResult("Error checking answer.");
             console.error(error);
@@ -40,17 +51,25 @@ function M5() {
             <div className="answerInputContainer">
                 <input 
                     type="text" 
-                    className="answerInput" 
+                    className={`answerInput ${shakeInput ? 'shake' : ''}`}
                     value={answer}
                     onChange={(e) => setAnswer(e.target.value)} 
                 />
                 <button className="answerButton" onClick={handleSubmit}>
                     Submit
                 </button>
-                <div className="resultMessage">
-                    {result}
-                </div>
             </div>
+            {isCorrect === true && (
+                <div className="correct-animation">
+                    <p>✔ Correct!</p>
+                    <img 
+                        src={next} 
+                        alt="" 
+                        className="nextButton"
+                        onClick={() => navigate('/MathLevels/M6')} 
+                    />
+                </div>
+            )}
         </div>
         </>
     )
