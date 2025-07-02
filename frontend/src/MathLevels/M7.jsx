@@ -61,7 +61,7 @@ function M7() {
                         src={next} 
                         alt="" 
                         className="nextButton" 
-                        onClick={() => navigate('/MathLevels/M2')}
+                        onClick={() => navigate('/MathLevels/M8')}
                     />
                 </div>
             )}

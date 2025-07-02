@@ -2,22 +2,30 @@ import { useState } from 'react';
 import axios from 'axios';
 import logo from '../assets/logo.png';
 import m8ProblemImg from '../assets/MathLevels/m8.png';
-
+import next from '../assets/next.png';
+import { useNavigate } from 'react-router-dom';
 
 function M8() {
     const [answer, setAnswer] = useState('');
-    const [result, setResult] = useState('');
+    const [isCorrect, setIsCorrect] = useState(null);
+    const [shakeInput, setShakeInput] = useState(false);
+    const navigate = useNavigate();
 
     const handleSubmit = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/api/check-answer', {
-                answer: answer.trim(), // keep as string
-                level: "M8" // ✅ correct level
+            const res = await axios.post('http://localhost:8080/api/check-answer', {
+                answer: answer,
+                level: "M8"
             });
-            setResult(response.data ? "Correct!" : "Wrong answer. Try again.");
-        } catch (error) {
-            setResult("Error checking answer.");
-            console.error(error);
+            if (res.data === true) {
+                setIsCorrect(true);
+            } else {
+                setIsCorrect(false);
+                setShakeInput(true);
+                setTimeout(() => setShakeInput(false), 500);
+            }
+        } catch (err) {
+            console.error("Error checking answer", err);
         }
     };
     return (
@@ -40,17 +48,25 @@ function M8() {
             <div className="answerInputContainer">
                 <input 
                     type="text" 
-                    className="answerInput" 
+                    className={`answerInput ${shakeInput ? 'shake' : ''}`}
                     value={answer}
                     onChange={(e) => setAnswer(e.target.value)} 
                 />
                 <button className="answerButton" onClick={handleSubmit}>
                     Submit
                 </button>
-                <div className="resultMessage">
-                    {result}
-                </div>
             </div>
+            {isCorrect === true && (
+                <div className="correct-animation">
+                    <p>✔ Correct!</p>
+                    <img 
+                        src={next} 
+                        alt="" 
+                        className="nextButton" 
+                        onClick={() => navigate('/MathLevels/M9')}
+                    />
+                </div>
+            )}
         </div>
         </>
     )
