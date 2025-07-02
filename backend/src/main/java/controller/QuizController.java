@@ -19,7 +19,7 @@ public class QuizController {
             Map.entry("M6", "AC"),
             Map.entry("M7", "256"),
             Map.entry("M8", "30"),
-            Map.entry("M9", "16"),
+            Map.entry("M9", "8"),
             Map.entry("M10", "36"),
             Map.entry("M11", "12"),
             Map.entry("M12", "CF"),
