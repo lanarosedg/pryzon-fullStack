@@ -63,7 +63,7 @@ function M9() {
                             src={next} 
                             alt="" 
                             className="nextButton" 
-                            onClick={() => navigate('/MathLevels/M2')}
+                            onClick={() => navigate('/MathLevels/M10')}
                         />
                     </div>
                         )}
