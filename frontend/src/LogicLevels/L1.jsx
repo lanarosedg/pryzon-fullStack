@@ -81,9 +81,8 @@ function L1() {
                         onClick={() => navigate('/LogicLevels/L2')}
                     />
                 </div>
-        )}
+                )}
         </div>
-
         </>
     )
 }
