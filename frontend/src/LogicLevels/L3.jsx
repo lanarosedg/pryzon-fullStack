@@ -78,7 +78,7 @@ function L3() {
                             src={next}
                             alt="Next"
                             className="nextButton"
-                            onClick={() => navigate('/LogicLevels/L2')}
+                            onClick={() => navigate('/LogicLevels/L4')}
                         />
                     </div>
                 )}

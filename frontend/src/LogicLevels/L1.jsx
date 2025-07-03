@@ -80,7 +80,7 @@ function L1() {
                         className="nextButton"
                         onClick={() => navigate('/LogicLevels/L2')}
                     />
-                </div>
+                    </div>
                 )}
         </div>
         </>
