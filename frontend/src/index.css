@@ -575,6 +575,11 @@
 
 /* Logic level 1 */
 
+.choicesContainer {
+  display: grid;
+  align-content: center;
+  grid-area: 3 / 2 / 4 / 5;
+}
 
 .L1Container {
   display: grid;
@@ -1148,6 +1153,15 @@
 
   grid-area: 2 / 2 / 3 / 3;
   text-align: center;
+
+  font-size: 24px;
+  animation: pop 0.5s ease-out;
+}
+
+.correct-animationL1 {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 5;
+  place-items: center;
 
   font-size: 24px;
   animation: pop 0.5s ease-out;

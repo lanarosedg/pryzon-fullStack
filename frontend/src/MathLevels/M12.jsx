@@ -60,7 +60,7 @@ function M12() {
                         src={home} 
                         alt="" 
                         className="nextButton" 
-                        onClick={() => navigate('/MathLevel')}
+                        onClick={() => navigate('/')}
                     />
                 </div>
             )}
