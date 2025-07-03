@@ -8,20 +8,29 @@ import l5a from '../assets/LogicLevels/l5a.png';
 import l5b from '../assets/LogicLevels/l5b.png';
 import l5c from '../assets/LogicLevels/l5c.png';
 
+import next from '../assets/next.png';
+import { useNavigate } from 'react-router-dom';
 
 function L5() {
-    const [result, setResult] = useState('');
+    const [isCorrect, setIsCorrect] = useState(null);
+    const [shakeInput, setShakeInput] = useState(false);
+    const navigate = useNavigate();
 
     const handleClick = async (choice) => {
         try {
-            const response = await axios.post('http://localhost:8080/api/check-answer', {
+            const res = await axios.post('http://localhost:8080/api/check-answer', {
                 answer: choice,
                 level: "L5"
             });
-            setResult(response.data ? "Correct!" : "Wrong answer. Try again");
-        } catch (error) {
-            setResult("Error checking answer.");
-            console.error(error)
+            if (res.data === true) {
+                setIsCorrect(true);
+            } else {
+                setIsCorrect(false);
+                setShakeInput(true);
+                setTimeout(() => setShakeInput(false), 500); 
+            }
+        }  catch (err) {
+            console.error("Error checking answer", err);
         }
     };
 
@@ -42,6 +51,7 @@ function L5() {
                     className="l5ProblemImg" 
                 />
             </div>
+            <div className={`choicesContainer ${shakeInput ? 'shake' : ''}`}>
                 <img 
                     src={l5a} 
                     alt="" 
@@ -60,9 +70,18 @@ function L5() {
                     className="l5c" 
                     onClick={() => handleClick("C")}
                 />
-                <div className="resultMessage">
-                    {result}
                 </div>
+                {isCorrect === true && (
+                    <div className="correct-animationL1">
+                        <p>✔ Correct!</p>
+                        <img
+                            src={next}
+                            alt="Next"
+                            className="nextButton"
+                            onClick={() => navigate('/LogicLevels/L6')}
+                        />
+                    </div>
+                )}
         </div>
         </>
     )
